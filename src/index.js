@@ -36,6 +36,8 @@
 // console.log(val4);
 
 //Reactでは主にconstを変数として使用する。
+// constで作成した配列の中身のプロパティは変更することができる。
+
 const val5 = ["dog", "cat"];
 // 0番目の要素を入れ替える
 val5[0] = "bird";
