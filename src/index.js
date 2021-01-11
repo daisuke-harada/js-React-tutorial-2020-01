@@ -151,3 +151,35 @@
 // const arr8 = arr4;
 // console.log(arr8);
 // arr8[0] = 100;
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+const nameArr = ["田中", "山田", "原田"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です。`);
+// }
+
+// mapを使用すると内部でアロー関数を使用することができる。
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+// mapで何番目に引数があるのか知りたい場合は第二引数を用意する。
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
+
+// // filterはreturnに条件式を書いて、条件に合致するものだけをreturnで返す。
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
+
+const newNameArr = nameArr.map((name) => {
+  if (name === "原田") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr);
