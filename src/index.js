@@ -137,7 +137,8 @@
 // //配列のコピー、結合
 // const arr4 = [10, 20];
 // const arr5 = [30, 40];
-// //コピー
+// //コピ-
+// //参照を引き継がずにコピーできる。
 // const arr6 = [...arr4];
 // arr6[0] = 100;
 // console.log(arr6);
@@ -155,7 +156,7 @@
 /**
  * mapやfilterを使った配列の処理
  */
-const nameArr = ["田中", "山田", "原田"];
+// const nameArr = ["田中", "山田", "原田"];
 // for (let index = 0; index < nameArr.length; index++) {
 //   console.log(`${index + 1}番目は${nameArr[index]}です。`);
 // }
@@ -175,11 +176,58 @@ const nameArr = ["田中", "山田", "原田"];
 // });
 // console.log(newNumArr);
 
-const newNameArr = nameArr.map((name) => {
-  if (name === "原田") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "原田") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
+
+/**
+ * 三項演算子
+ */
+
+// ある条件 ? 条件がtrueの時　: 条件がfalseの時
+// ifやelseが１行で表現できるのが三項演算子です。
+//  const val1 = 1 < 0 ? 'trueです' : 'falseです。';
+//  console.log(val1);
+
+// const　num = 1300;
+// //３桁区切りさせる。
+// // toLocaleString();
+// const formattedNum = typeof num === 'number' ? num.toLocaleString() : '数値を入力してください';
+// console.log(formattedNum);
+
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています!" : "許容範囲内です。";
+// };
+
+// console.log(checkSum(50, 40));
+
+/**
+ * 論理演算子の本当の意味を知ろう　&& ||
+ */
+
+// const flag1 = true;
+// const flag2 = false;
+
+// if (flag1 || flag2) {
+//   console.log("1か2はtrueになります");
+// }
+
+// if (flag1 && flag2) {
+//   console.log("1も2はtrueになります");
+// }
+//実はまたはとかかつという意味ではない
+// ||は左側がfalseとなる時右側を返すという意味。
+// javascriptはnullをfalse判定する。
+// const num = 100;
+// const fee = num || "金額未設定です。";
+// console.log(fee);
+
+// &&は左側がtrueなら右側を返す。
+// const num2 = 100;
+// const fee2 = num2 && "何か設定されました";
+// console.log(fee2);
